@@ -1,0 +1,60 @@
+<html>
+    
+<head>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 450px;
+            background-color: aqua;
+        }
+
+        buttonProperties {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type=button] {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        } 
+
+    </style>
+</head>
+
+
+<body>
+    <script type="text/javascript">
+        function handleClick(e) {
+            let arg1 = document.getElementById("arg1").value;
+            let arg2 = document.getElementById("arg2").value;
+        
+            payload = { "arg1" : arg1,
+            "arg2" : arg2 }
+        
+            const response = fetch("https://d9uiibfgvj.execute-api.us-east-1.amazonaws.com/Seats4U/",
+            {
+                method: "POST",
+                body: JSON.stringify(payload)
+              }).then((response) => response)
+        
+                const fetchResult = async () => {
+                let val = await response
+                let result = await val.json()
+                document.getElementById("result").value = result.body
+            }
+            
+            fetchResult()
+        }
+    </script>
+    
+    <div class="buttonProperties">
+        <input type="button" value="Create Venue" onClick="JavaScript:handleClick('consumerButton')" style="background-color: green; color: white;">
+        <input type="button" value="Create Show" onClick="JavaScript:handleClick('venueButton')" style="background-color: red; color: white;">
+        <input type="button" value="Delete Venue" onClick="JavaScript:handleClick('venueButton')" style="background-color: red; color: white;">
+    </div>
+    
+</body>
+</html>
