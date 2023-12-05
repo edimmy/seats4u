@@ -6,7 +6,7 @@ export function deleteShow() {
 
     // prepare payload for the post
     let data = { 
-        'delete_Name': deleteName.value 
+        'delete_Name': deleteName.value
     }
 
     const handler = (json) => {
