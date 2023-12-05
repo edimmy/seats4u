@@ -2,17 +2,16 @@ import { post } from "./api"
 
 export function deleteShow() {
     //venue data
-    let name = document.getElementById("deleteShowId")
-
+    let deleteName = document.getElementById("delete_Name")
 
     // prepare payload for the post
     let data = { 
-        'deleteShowId': name.value 
+        'delete_Name': deleteName.value 
     }
 
     const handler = (json) => {
         console.log(json)
-        name.value = ''
+        deleteName.value = ''
     }
 
     post('/deleteShow', data, handler)
