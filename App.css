@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.createShow {
+  position: absolute;
+  top : 500px;
+  left: 300px;
+}
+.createVenue {
+  position: absolute;
+  top : 650px;
+  left: 10px;
+}
+
+.show-list {
+  position: absolute;
+  top : 30px;
+  left: 600px;
+}
+
+.venue-list {
+  position: absolute;
+  top : 30px;
+  left: 1200px;
+}
+
+
+.show {
+  position: absolute;
+  top : 10px;
+  left: 600px;
+}
+
+
+.venue {
+  position: absolute;
+  top : 10px;
+  left: 1215px;
+}
+
+
+.deleteVenue {
+  position: absolute;
+  top : 850px;
+  left: 300px;
+}
+
+.showDisp {
+  position: absolute;
+  top : 500px;
+  left: 100px;
+  font-style: italic;
+}
