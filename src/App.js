@@ -11,6 +11,8 @@ import VMCreateVenue from "./pages/vmCreateVenue";
 import AdminListVenues from "./pages/adminListVenues"
 import DeleteVenue from './pages/vmDeleteVenue';
 import CreateShow from './pages/vmCreateShow'
+import SearchShowOrVenue from './pages/searchShowOrVenue'
+import PurchaseSeats from './pages/purchaseSeats'
 
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
 
             <Route path="vmDeleteVenue" element={<DeleteVenue />} />
             <Route path="vmCreateShow" element={<CreateShow />} />
-            
+            <Route path="searchShowVenue" element={<SearchShowOrVenue />} />
+            <Route path="purchaseSeats" element={<PurchaseSeats />} />
+    
         </Route>
       </Routes>
     </BrowserRouter>

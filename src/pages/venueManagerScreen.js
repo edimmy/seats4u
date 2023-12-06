@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 
 
 function VMScreen() {
-  //const navigate = useNavigate();
 
   return (
     <div className="App">
@@ -19,17 +18,13 @@ function VMScreen() {
         <p>
           Venue Manager: 
         </p>
-
-        {/* <ButtonLink to="/vmCreateVenue">Create Venue</ButtonLink> */}
         <ButtonLink to="/vmDeleteVenue">Delete Venue</ButtonLink>
         <ButtonLink to="/vmCreateShow">Create Show</ButtonLink>
-       
+
+        <ButtonLink to="/">Log out</ButtonLink>
 
       </header>
-      
-      
     </div>
-    
   );
 }
 

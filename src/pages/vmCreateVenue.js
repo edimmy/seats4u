@@ -1,41 +1,26 @@
 import '../App.css';
 
-import React, { useState } from 'react';
-//import { Navigate, useNavigate } from "react-router-dom";
-import SeatingForm from './setSectionsForCreateVenue';
+import React, { useState, useEffect } from 'react';
 import { createVenue } from '../controller/createVenue';
 
-
 function CreateVenue() {
-  //const navigate = useNavigate();
-  const handleSubmit = (event) => {
-  
-  event.preventDefault(); // Prevents the default form submission behavior
-  // Get form data
-  const formData = new FormData(event.target);
-  // Create an object from the form data
-  const formObject = {};
-  formData.forEach((value, key) => {
-    formObject[key] = value;
-  });
-  console.log('Form data submitted:', formObject.passwordField.toString());
 
-  if(formObject.passwordField.toString()=== "abc"){
-    console.log("authenticated VM");
-    //navigate('/vmMainScreen');
-    //
-  }
-
-};
+  const [generatedPass, setGenerated] = useState(Math.random().toString(36).slice(-8));
+  // const [generatedPass, setGenerated] = useState(0);
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    document.getElementById("credential").value = generatedPass;
+  },[generatedPass]);
 
 return (
   <div>
   <h1> Venue Name: </h1> 
   <form onSubmit={createVenue}>
-    <h2> Venue Name: </h2>  
+    <h4> Venue Name: </h4>  
     <input type="text" id="name" name="name"></input>
-    <h2> Credential: </h2> 
-    <input type="text" id="credential" name="credential"></input>
+    <h4> Auto-Generated Credential:   </h4> 
+    <input type="text" id="credential" name="credential" value={setGenerated} readonly></input>
+
     {/* Side Left Section */}
     <div>
     <h2> Left: </h2>  

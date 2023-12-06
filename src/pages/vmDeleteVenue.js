@@ -18,16 +18,16 @@ function DeleteVenue() {
         </p>
         <form onSubmit={deleteVenue}>
 
-          <label for="name"> Venue Name:</label>
+          <label htmlFor="name"> Venue Name:</label>
           <input type="text" id="name" name="name"></input>
           
-          <label for="credential"> Credential:</label>
+          <label htmlFor="credential"> Credential:</label>
           <input type="text" id="credential" name="credential"></input>
 
           <input type="submit"/>
         </form>
 
-        <ButtonLink to="/">Go to Main Page</ButtonLink>
+        <ButtonLink to='/vmMainScreen'>Go back</ButtonLink>
       </header>
 
       

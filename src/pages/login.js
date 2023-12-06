@@ -5,6 +5,8 @@ import '../App.css';
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from "react-router-dom";
 
+import { loginVM } from '../controller/loginVM';
+
 
 function Login() {
   const navigate = useNavigate();
@@ -22,8 +24,15 @@ const handleSubmit = (event) => {
   });
   console.log('Form data submitted:', formObject.passwordField.toString());
 
+  //const valid = loginVM(formObject.passwordField.toString())
+  // if (valid){
+  //   console.log("authenticated VM");
+  //   navigate('/vmMainScreen');
+  // }
+
   if(formObject.passwordField.toString()=== "abc"){
     console.log("authenticated VM");
+
     navigate('/vmMainScreen');
   }
 

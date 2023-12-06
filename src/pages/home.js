@@ -1,4 +1,3 @@
-import logo from '../logo.svg';
 import '../App.css';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +16,7 @@ function App() {
         <ButtonLink to="/vmCreateVenue">Create Venue</ButtonLink>
         <ButtonLink to="/login">Login as venue manager</ButtonLink>
         <ButtonLink to="/loginAdmin">Login as an admin</ButtonLink>
+        <ButtonLink to="/searchShowVenue">Search Shows or Venues</ButtonLink>
 
       </header>
     </div>

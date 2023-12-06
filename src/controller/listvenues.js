@@ -8,6 +8,7 @@ export function getVenues() {
             let str = ''
             for (let venue of response.constants) {
                 str += venue.name + '<br>'
+                // str += venue.name + ' <button type="button"> View </button> <br>'
             }
 
             // insert HTML in the <div> with 
