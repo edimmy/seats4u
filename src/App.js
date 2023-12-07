@@ -13,7 +13,10 @@ import DeleteVenue from './pages/vmDeleteVenue';
 import CreateShow from './pages/vmCreateShow'
 import SearchShowOrVenue from './pages/searchShowOrVenue'
 import PurchaseSeats from './pages/purchaseSeats'
-
+import ActivateShow from './pages/vmActivateShow'
+import DeleteShow from './pages/vmDeleteShow'
+import AdminMain from './pages/adminScreen'
+import AdminShowReport from './pages/adminShowReport'
 
 function App() {
   const [authenticated, changeUserType] = React.useState(0);  
@@ -35,7 +38,11 @@ function App() {
             <Route path="vmCreateShow" element={<CreateShow />} />
             <Route path="searchShowVenue" element={<SearchShowOrVenue />} />
             <Route path="purchaseSeats" element={<PurchaseSeats />} />
-    
+            <Route path="vmActivateShow" element={<ActivateShow />} />
+            <Route path="vmDeleteShow" element={<DeleteShow />} />
+            <Route path="adminMainScreen" element={<AdminMain />} />
+            <Route path="adminShowReport" element={<AdminShowReport />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

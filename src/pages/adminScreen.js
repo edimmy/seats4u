@@ -9,19 +9,18 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function VMScreen() {
+function AdminScreen() {
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Venue Manager: 
+          Admin: 
         </p>
-        <ButtonLink to="/vmDeleteVenue">Delete Venue</ButtonLink>
-        <ButtonLink to="/vmCreateShow">Create Show</ButtonLink>
 
-        <ButtonLink to="/vmActivateShow">Activate Show</ButtonLink>
+        <ButtonLink to="/adminListVenues">List Venues</ButtonLink>
+        <ButtonLink to="/adminShowReport">Generate Shows Report</ButtonLink>
         <ButtonLink to="/vmDeleteShow">Delete Show</ButtonLink>
 
         <ButtonLink to="/">Log out</ButtonLink>
@@ -36,4 +35,4 @@ function ButtonLink({ to, children }) {
 }
 
 
-export default VMScreen;
+export default AdminScreen;

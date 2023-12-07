@@ -24,17 +24,20 @@ const handleSubmit = (event) => {
   });
   console.log('Form data submitted:', formObject.passwordField.toString());
 
-  //const valid = loginVM(formObject.passwordField.toString())
-  // if (valid){
-  //   console.log("authenticated VM");
-  //   navigate('/vmMainScreen');
-  // }
+  var valid = loginVM(formObject.passwordField.toString());
 
-  if(formObject.passwordField.toString()=== "abc"){
+  console.log("validity: ", valid)
+
+  if (valid){
     console.log("authenticated VM");
-
     navigate('/vmMainScreen');
   }
+
+  // if(formObject.passwordField.toString()=== "abc"){
+  //   console.log("authenticated VM");
+
+  //   navigate('/vmMainScreen');
+  // }
 
 };
 

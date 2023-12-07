@@ -24,7 +24,8 @@ const handleSubmit = (event) => {
 
   if(formObject.passwordField.toString()=== "abc"){
     console.log("authenticated VM");
-    navigate('/adminListVenues');
+    // navigate('/adminListVenues');
+    navigate('/adminMainScreen');
   }
 
 };

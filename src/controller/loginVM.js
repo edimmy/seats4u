@@ -4,12 +4,13 @@ import { post, get } from "./api"
 //TODO: return true if the credential string is valid
 //need to do get request
 
-export function loginVM(credentialToCheck){
+export function loginVM(s){
         // this sends the ACTUAL POST and retrieves the answer.
 
-        let credential = document.getElementById("passwordField")
+        // let credential = document.getElementById("passwordField")
+        let credential = s;
         let data = {
-            'credential' : credentialToCheck.toString()
+            'credential' : credential.value
         }
 
         const handler = (json) => {
@@ -19,7 +20,7 @@ export function loginVM(credentialToCheck){
 
         post('/venueManagerLogin', data, handler)
         .then(function (response) {
-            console.log(response.constants)
+            console.log("response" + response.constants)
             return response.constants //true if valid, false if invalid
         })
         .catch(function (error) {

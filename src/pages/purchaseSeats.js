@@ -16,31 +16,25 @@ function ListVenues() {
   var r = document.querySelector(':root');
 
   //in controller, set these values
-  function setCSSVarsForFlexbox() {
-    // Set the value of variable --blue to another value (in this case "lightblue")
-      //r.style.setProperty('--blue', 'lightblue');
-      r.style.setProperty('--numRowsL', 3);
-      r.style.setProperty('--numRowsL', 3);
+  // function setCSSVarsForFlexbox() {
+  //   // Set the value of variable --blue to another value (in this case "lightblue")
+  //     //r.style.setProperty('--blue', 'lightblue');
+  //     r.style.setProperty('--numRowsL', 3);
+  //     r.style.setProperty('--numRowsL', 3);
 
-      r.style.setProperty('--numRowsC', 3);
-      r.style.setProperty('--numRowsC', 3);
+  //     r.style.setProperty('--numRowsC', 3);
+  //     r.style.setProperty('--numRowsC', 3);
       
-      r.style.setProperty('--numRowsR', 3);
-      r.style.setProperty('--numRowsR', 3);
-    }
-
+  //     r.style.setProperty('--numRowsR', 3);
+  //     r.style.setProperty('--numRowsR', 3);
+  //   }
 
   return (
     <div className="App">
-        <p>
-          List of Venues:
-          <div id='venue-list'>
-          </div>
-        </p>
 
     {/* controller will determine these elements */}
       <body>
-
+      <h1> Purchase Seats </h1>
       <div id='container' class="flex-container-main">
 
         <div id='left' class="flex-container-left" name='section'>
@@ -77,8 +71,6 @@ function ListVenues() {
     </div>
   );
 }
-
-
 
 // // Create a function for setting a variable value
 // function myFunction_set() {
