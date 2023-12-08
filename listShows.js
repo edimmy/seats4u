@@ -6,7 +6,7 @@ export function getShows() {
 
     // prepare payload for the post
     let data = { 
-        'passwordListVenues': credential.value
+        'passwordListShows': credential.value
     }
 
     const handler = (json) => {
