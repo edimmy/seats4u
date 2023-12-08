@@ -7,7 +7,7 @@ export function getActiveShowsVenues() {
             console.log(response.constants)
             let str = ''
             for (let show of response.constants) {
-                str += show.show_name + '<br>';
+                str += show.show_name + '<br>'
             }
 
             // insert HTML in the <div> with 
