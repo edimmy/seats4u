@@ -20,3 +20,6 @@ export function searchShowsAndVenues() {
     post('/searchShowsAndVenues', data, handler)
   
 }
+
+// make sure to add <div className="search_shows" id="search_shows"></div> to webpage
+// do this whenever we are using a response from AWS post
