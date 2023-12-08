@@ -1,5 +1,3 @@
-import { post } from "./api"
-
 export function deleteShowAdmin() {
     //venue data
     let deleteNameAdmin = document.getElementById("delete_Name_Admin")
