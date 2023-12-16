@@ -24,7 +24,8 @@ const handleSubmit = (event) => {
 
   if(formObject.passwordField.toString()=== "abc"){
     console.log("authenticated VM");
-    navigate('/adminListVenues');
+    // navigate('/adminListVenues');
+    navigate('/adminMainScreen');
   }
 
 };
@@ -49,32 +50,3 @@ const handleSubmit = (event) => {
 
 export default Login;
 
-
-
-
-
-// import logo from '../logo.svg';
-// import '../App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           this is the login page for an admin
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           this is the login page
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

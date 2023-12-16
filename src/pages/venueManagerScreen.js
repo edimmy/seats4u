@@ -1,35 +1,30 @@
-
-import logo from '../logo.svg';
 import '../App.css';
-
-import { createShow } from './controller.createShow'
-
-import React, { useState } from 'react';
-//import { Navigate, useNavigate } from "react-router-dom";
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 
 function VMScreen() {
-  //const navigate = useNavigate();
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Venue Manager:
+          Venue Manager: 
         </p>
-
-        {/* <ButtonLink to="/vmCreateVenue">Create Venue</ButtonLink> */}
         <ButtonLink to="/vmDeleteVenue">Delete Venue</ButtonLink>
         <ButtonLink to="/vmCreateShow">Create Show</ButtonLink>
-       
 
+        <ButtonLink to="/vmActivateShow">Activate Show</ButtonLink>
+        <ButtonLink to="/deleteShow">Delete Show</ButtonLink>
+        <ButtonLink to="/listShowsVM">List Shows</ButtonLink>
+
+        <ButtonLink to="/vmCreateBlock">Create Show Blocks</ButtonLink>
+        <ButtonLink to="/vmDeleteBlock">Delete Show Block</ButtonLink>
+        <ButtonLink to="/vmListBlock">List Show Blocks</ButtonLink>
+
+        <ButtonLink to="/">Log Out</ButtonLink>
       </header>
-      
-      
     </div>
-    
   );
 }
 

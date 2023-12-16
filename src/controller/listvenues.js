@@ -10,15 +10,11 @@ export function getVenues() {
                 str += venue.name + '<br>'
             }
 
-            // insert HTML in the <div> with 
-            // constant-list
-            <div id='venue-list'></div>
             let cd = document.getElementById('venue-list')
             cd.innerHTML = str
 
         })
         .catch(function (error) {
-            // not much to do
             console.log(error)
         })
     }

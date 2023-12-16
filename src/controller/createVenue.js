@@ -1,11 +1,11 @@
 import { post } from "./api"
 
-export function createVenue() {
+export function createVenue(navigate) {
     //venue data
     let name = document.getElementById("name")
     let credential = document.getElementById("credential")
     //section data
-    let venue_name = name
+    // let venue_name = name
     let location0 = "left"
     let num_rows0 = document.getElementById("num_rows0")
     let seats_in_row0 = document.getElementById("seats_in_row0")
@@ -20,7 +20,7 @@ export function createVenue() {
     let data = { 
         'name': name.value, 
         'credential': credential.value, 
-        'venue_name': venue_name,
+        'venue_name': name.value,
         'location0': location0,
         'num_rows0': num_rows0.value, 
         'seats_in_row0': seats_in_row0.value,
@@ -34,7 +34,7 @@ export function createVenue() {
 
     const handler = (json) => {
         console.log(json)
-        document.getElementById("result").value = json.body
+        //document.getElementById("result").value = json.body
         name.value = ''
         credential.value = ''
         num_rows0.value = ''
@@ -43,6 +43,9 @@ export function createVenue() {
         seats_in_row0.value = ''
         seats_in_row1.value = ''
         seats_in_row2.value = ''
+        if(json.statusCode == 200){
+            navigate("/vmMainScreen")
+        }
                
     }
 

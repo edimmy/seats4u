@@ -1,4 +1,3 @@
-import logo from '../logo.svg';
 import '../App.css';
 import { Link } from 'react-router-dom';
 
@@ -6,17 +5,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Default Screen:
-        </p>
-        <p1>
-          welcome to seats4u
-        </p1>
-        {/* <button id="find_show_or_venue"> find shows or venues</button> */}
-        {/* <button id="venue_manager_login"> login as venue manager </button> */}
+        <h1>
+          Welcome to Seats4u
+        </h1>
         <ButtonLink to="/vmCreateVenue">Create Venue</ButtonLink>
         <ButtonLink to="/login">Login as venue manager</ButtonLink>
         <ButtonLink to="/loginAdmin">Login as an admin</ButtonLink>
+
+        {/* <ButtonLink to="/searchShowVenue">Search Shows or Venues</ButtonLink> */}
+        {/* <label for="purchaseSeatButton">Test</label> */}
+        <h2>For consumers: </h2>
+        <ButtonLink to="/searchShowVenue">Search Shows to Purchase Seats</ButtonLink>
+        <ButtonLink to="/listActiveShowsVenues">List Shows</ButtonLink>
 
       </header>
     </div>

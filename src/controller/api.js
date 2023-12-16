@@ -16,6 +16,21 @@ export async function post(resource, data, handler) {
     .catch((err) => handler(err))
 }
 
+export async function post2(resource, data) {
+    try {
+        const response = await fetch(api(resource), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const jsonResponse = await response.json();
+        return jsonResponse;
+    } catch (error) {
+        throw error; // Re-throw the error to be caught by the calling function
+    }
+}
+
 
 // resource is a string like "/constants"
 export async function get(resource) {

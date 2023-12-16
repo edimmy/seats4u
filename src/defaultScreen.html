@@ -1,0 +1,67 @@
+<html>
+    
+<head>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 450px;
+            background-color: aqua;
+        }
+
+        buttonProperties {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type=button] {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        } 
+        
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #welcome_message {
+            margin-top: -300px;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <script type="text/javascript">
+        function handleClick(buttonId) {
+            switch(buttonId){
+                case "consumerButton":
+                    document.getElementById("message").innerText = "hello world!";
+                    break;
+
+                case "venueButton":
+                    window.location.href = "file:///C:/Users/Samson%20Hodges/Desktop/Seats4u/passwordScreenVenueManager.html"
+                    break;
+
+                case "adminButton":
+                    document.getElementById("message").innerText = "hello world!";
+                    break;
+            }
+       
+    }
+    </script>
+    
+    <div class="buttonProperties">
+        <input type="button" value="Find Shows or Venues" onClick="JavaScript:handleClick('consumerButton')" style="background-color: green; color: white;">
+        <input type="button" value="Login as Venue Manager" onClick="JavaScript:handleClick('venueButton')" style="background-color: red; color: white;">
+        <input type="button" value="Login as Administrator" onClick="JavaScript:handleClick('adminButton')" style="background-color: blue; color: white;">
+    </div>
+
+    <div id="welcome_message">Welcome to Seats4U!</div>
+    <div id="message"></div>
+    
+</body>
+</html>

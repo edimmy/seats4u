@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+#blockDiagram {
+  width: 60%;
+  height: auto;
+  left: 0px;
+  right: 0px;
+}
+
+
+#blockDiagramSeats {
+  width: 25%;
+  height: auto;
+  left: 0px;
+  right: 0px;
 }

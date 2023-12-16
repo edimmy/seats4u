@@ -1,48 +1,34 @@
 import '../App.css';
 
-import React, { useState } from 'react';
-//import { Navigate, useNavigate } from "react-router-dom";
-import SeatingForm from './setSectionsForCreateVenue';
+import React, { useState, useEffect } from 'react';
+import createShow from '../controller/createShow'
+import { useNavigate } from "react-router-dom";
 
 
-function createShow() {
-  //const navigate = useNavigate();
-  const handleSubmit = (event) => {
-  
-  event.preventDefault(); // Prevents the default form submission behavior
-  // Get form data
-  const formData = new FormData(event.target);
-  // Create an object from the form data
-  const formObject = {};
-  formData.forEach((value, key) => {
-    formObject[key] = value;
-  });
-  console.log('Form data submitted:', formObject.passwordField.toString());
+function CreateShow() {
+  const navigate = useNavigate();
 
-  if(formObject.passwordField.toString()=== "abc"){
-    console.log("authenticated VM");
-    //navigate('/vmMainScreen');
+  function handlerShow(){
+    createShow(navigate)
   }
-
-};
 
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          this is the createVenue page
+          Create Show:
         </p>
+        Show Name: <input type="text" id="show_name"/>
+        DateTime YYYY-MM-DD HH:MI:SS (24 hour): <input type="text" id="datetime" placeholder="YYYY-MM-DD HH:MI:SS (24 hour)" />
+        Credential: <input type="text" id="credential" placeholder="credential" />
+        Price: <input type="text" id="seat_price" />
 
-        <SeatingForm />
-        {/* <form id="enterPassword" onSubmit={handleSubmit}>
-          <label htmlFor="passwordField">Enter Password:</label>
-          <input type="text" id="passwordField" name="passwordField" />
-          <input type="submit" />
-        </form> */}
+        <button onClick={handlerShow}>Submit</button>
+  
       </header>
     </div>
     
   );
 }
 
-export default createShow;
+export default CreateShow;
